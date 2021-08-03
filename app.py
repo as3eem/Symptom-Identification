@@ -15,15 +15,15 @@ def get_prediction():
     print()
     out = predict_symptom(title)
     print(out)
-    
-    ## give mappings returned
-    result=out
+
+    # give mappings returned
+    result = out
     # if out:
     #     result = 'SPAM'
     # else:
     #     result = 'Not-SPAM'
 
-    print(result, len(result),'+++++++++')
+    print(result, len(result), '+++++++++')
     return render_template('index.html', size=len(out), symptoms=result)
 
 

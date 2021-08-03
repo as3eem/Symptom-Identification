@@ -9,7 +9,7 @@ from configparser import ConfigParser
 
 config = ConfigParser()
 config.read('./config.ini')
-DATA_PATH= config['DEFAULT']['DATA_PATH']
+DATA_PATH = config['DEFAULT']['DATA_PATH']
 MODEL_PATH = config['DEFAULT']['MODEL_PATH']
 
 
@@ -20,7 +20,7 @@ def process_data(l):
             'Symptom_15', 'Symptom_16', 'Symptom_17']
     # create df
     noo = pd.DataFrame(columns=cols)
-    l=l.split(',')
+    l = l.split(',')
     # make the list of size 17 only
     if len(l) >= 17:
         l = l[:17]
@@ -63,6 +63,7 @@ def process_data(l):
     df = d.replace('foul_smell_of urine', 0)
     data = df.iloc[:, 1:].values
     return data
+
 
 if __name__ == '__main__':
     process_data(DATA_PATH, MODEL_PATH)
