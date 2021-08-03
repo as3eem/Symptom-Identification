@@ -13,7 +13,6 @@ with open(MODEL_PATH, 'rb')as f:
 def predict_symptom(data,model=model):
     processed_data = process_data(data) 
     predictions = model.predict(processed_data)
-    print(predictions,'____________')
     return predictions
 
     

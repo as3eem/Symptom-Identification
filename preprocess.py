@@ -21,8 +21,6 @@ def process_data(l):
     # create df
     noo = pd.DataFrame(columns=cols)
     l=l.split(',')
-    print(type(l))
-    print(l,'))))))))))))')
     # make the list of size 17 only
     if len(l) >= 17:
         l = l[:17]
@@ -64,7 +62,6 @@ def process_data(l):
     d = d.replace('spotting_ urination', 0)
     df = d.replace('foul_smell_of urine', 0)
     data = df.iloc[:, 1:].values
-    print(data,'>>>>>>>>>>>>',type(data))
     return data
 
 if __name__ == '__main__':
